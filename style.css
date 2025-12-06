@@ -26,7 +26,8 @@ body {
 }
 
 .hero-photo {
-  max-width: 220px;
+  max-width: 320px;
+  width: 100%;
 }
 
 /* Petites infos contact dans le header */
