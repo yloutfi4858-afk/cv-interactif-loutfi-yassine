@@ -1,25 +1,31 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>CV Interactif - Ton Nom</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CV - Yassine Loutfi</title>
 
   <!-- Bootstrap CSS -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+    rel="stylesheet"
+  />
+
+  <!-- Icônes Bootstrap (optionnel mais pro) -->
+  <link
+    rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css"
+  />
 
   <!-- Ton CSS perso -->
-  <link rel="stylesheet" href="style.css">
-
-  <!-- Bootstrap JS -->
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <link rel="stylesheet" href="style.css" />
 </head>
-<body class="bg-light">
+<body data-bs-spy="scroll" data-bs-target="#mainNav" data-bs-offset="70">
 
   <!-- NAVBAR -->
-  <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+  <nav id="mainNav" class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top shadow-sm">
     <div class="container">
-      <a class="navbar-brand" href="#">Ton Nom</a>
+      <a class="navbar-brand fw-semibold" href="#profil">Yassine Loutfi</a>
 
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu">
         <span class="navbar-toggler-icon"></span>
@@ -37,178 +43,235 @@
     </div>
   </nav>
 
-  <!-- EN-TÊTE / PROFIL -->
-  <header id="profil" class="py-5">
-    <div class="container">
+  <!-- HERO / PROFIL -->
+  <header id="profil" class="hero-section">
+    <div class="overlay"></div>
+    <div class="container position-relative">
       <div class="row align-items-center g-4">
         <div class="col-md-3 text-center">
-          <!-- Tu pourras changer la source de l'image -->
-          <img src="https://via.placeholder.com/200" alt="Photo de profil" class="rounded-circle img-fluid border">
+          <!-- Tu peux remplacer l'URL par ta vraie photo si tu veux -->
+          <img
+            src="https://via.placeholder.com/220"
+            alt="Photo de profil"
+            class="rounded-circle img-fluid border border-3 border-light shadow-sm hero-photo"
+          />
         </div>
-        <div class="col-md-9">
-          <h1 class="mb-1">Ton Nom</h1>
-          <h4 class="text-muted mb-3">Intitulé du poste (Étudiant(e) en ...)</h4>
-          <p class="mb-1"><strong>Email :</strong> ton.email@example.com</p>
-          <p class="mb-1"><strong>Téléphone :</strong> +212 6 XX XX XX XX</p>
-          <p class="mb-3"><strong>Ville :</strong> Ta ville</p>
+        <div class="col-md-9 text-white">
+          <h1 class="fw-bold mb-1">Yassine Loutfi</h1>
+          <h4 class="fw-normal text-light-50 mb-3">Étudiant en info</h4>
 
-          <button id="btnAfficherPlus" class="btn btn-outline-primary btn-sm">
-            Afficher / masquer description
+          <div class="d-flex flex-wrap gap-3 mb-3 contact-infos">
+            <span><i class="bi bi-envelope me-1"></i> yassineloutfi07@gmail.com</span>
+            <span><i class="bi bi-telephone me-1"></i> 06 03 94 38 22</span>
+            <span><i class="bi bi-geo-alt me-1"></i> Marrakech</span>
+          </div>
+
+          <button id="btnAfficherPlus" class="btn btn-outline-light btn-sm">
+            Afficher / masquer le résumé
           </button>
 
-          <p id="descriptionProfil" class="mt-3">
-            Brève description de toi (2–3 phrases) : ton profil, ton objectif, ta spécialité...
+          <p id="descriptionProfil" class="mt-3 mb-0">
+            Étudiant en informatique à la FSSM Marrakech, intéressé par le développement web
+            (HTML, CSS, Bootstrap) et motivé pour progresser en JavaScript et en programmation
+            en général. Sérieux, motivé et prêt à apprendre sur des projets réels.
           </p>
         </div>
       </div>
     </div>
   </header>
 
-  <!-- SECTION FORMATION -->
-  <section id="formation" class="py-5 bg-white">
-    <div class="container">
-      <div class="d-flex justify-content-between align-items-center mb-3">
-        <h2 class="mb-0">Formation</h2>
-        <button class="btn btn-sm btn-outline-secondary" data-section="formation">
-          Masquer / Afficher
-        </button>
-      </div>
+  <main class="mt-5 pt-4">
 
-      <div class="timeline-section">
-        <div class="mb-3">
-          <h5>2023 - 2025 : Licence ...</h5>
-          <p class="mb-0 text-muted">Université / École</p>
-          <p>Petite description (option, spécialité, etc.).</p>
+    <!-- FORMATION -->
+    <section id="formation" class="section-block bg-white">
+      <div class="container">
+        <div class="section-header d-flex justify-content-between align-items-center mb-4">
+          <h2 class="section-title mb-0">Formation</h2>
+          <button class="btn btn-sm btn-outline-secondary" data-section="formation">
+            Masquer / afficher
+          </button>
         </div>
-        <div class="mb-3">
-          <h5>2020 - 2023 : Baccalauréat ...</h5>
-          <p class="mb-0 text-muted">Lycée ...</p>
-          <p>Brève description.</p>
-        </div>
-      </div>
-    </div>
-  </section>
 
-  <!-- SECTION COMPÉTENCES -->
-  <section id="competences" class="py-5">
-    <div class="container">
-      <div class="d-flex justify-content-between align-items-center mb-3">
-        <h2 class="mb-0">Compétences</h2>
-        <button class="btn btn-sm btn-outline-secondary" data-section="competences">
-          Masquer / Afficher
-        </button>
-      </div>
+        <div class="timeline-section toggle-target-formation">
+          <div class="timeline-item">
+            <h5 class="mb-1">2024 - présent : Étudiant en Informatique</h5>
+            <p class="text-muted mb-1">Faculté des Sciences Semlalia (FSSM), Marrakech</p>
+            <p class="mb-0">
+              Parcours en informatique avec un intérêt particulier pour le développement web,
+              les technologies front-end et la programmation.
+            </p>
+          </div>
 
-      <div class="row g-3">
-        <div class="col-md-4">
-          <div class="card h-100">
-            <div class="card-body">
-              <h5 class="card-title">Développement Web</h5>
-              <ul class="mb-0">
-                <li>HTML / CSS / Bootstrap</li>
-                <li>JavaScript (bases)</li>
-                <li>Git / GitHub</li>
-              </ul>
-            </div>
+          <div class="timeline-item">
+            <h5 class="mb-1">2023 - 2024 : Baccalauréat Sciences Math</h5>
+            <p class="text-muted mb-1">Lycée Salah Eddine El Ayoubi, Tinghir</p>
+            <p class="mb-0">
+              Formation scientifique orientée mathématiques, avec une base solide en logique,
+              raisonnement et résolution de problèmes.
+            </p>
           </div>
         </div>
+      </div>
+    </section>
 
-        <div class="col-md-4">
-          <div class="card h-100">
-            <div class="card-body">
-              <h5 class="card-title">Langages</h5>
-              <ul class="mb-0">
-                <li>C / C++ (exemple)</li>
-                <li>Python (exemple)</li>
-                <li>Autre...</li>
-              </ul>
-            </div>
-          </div>
+    <!-- COMPÉTENCES -->
+    <section id="competences" class="section-block">
+      <div class="container">
+        <div class="section-header d-flex justify-content-between align-items-center mb-4">
+          <h2 class="section-title mb-0">Compétences</h2>
+          <button class="btn btn-sm btn-outline-secondary" data-section="competences">
+            Masquer / afficher
+          </button>
         </div>
 
-        <div class="col-md-4">
-          <div class="card h-100">
-            <div class="card-body">
-              <h5 class="card-title">Soft Skills</h5>
-              <ul class="mb-0">
-                <li>Travail en équipe</li>
-                <li>Autonomie</li>
-                <li>Communication</li>
-              </ul>
+        <div class="row g-4 toggle-target-competences">
+          <div class="col-md-4">
+            <div class="card h-100 shadow-sm">
+              <div class="card-body">
+                <h5 class="card-title mb-3">Développement Web</h5>
+                <div class="skill-item mb-2">
+                  <span>HTML (bases)</span>
+                  <div class="progress">
+                    <div class="progress-bar" style="width: 50%"></div>
+                  </div>
+                </div>
+                <div class="skill-item mb-2">
+                  <span>CSS (bases)</span>
+                  <div class="progress">
+                    <div class="progress-bar" style="width: 40%"></div>
+                  </div>
+                </div>
+                <div class="skill-item mb-2">
+                  <span>Bootstrap (débutant)</span>
+                  <div class="progress">
+                    <div class="progress-bar" style="width: 35%"></div>
+                  </div>
+                </div>
+                <small class="text-muted">
+                  Niveau évolutif, en cours d'apprentissage via projets et TPs.
+                </small>
+              </div>
             </div>
           </div>
-        </div>
 
-      </div>
-    </div>
-  </section>
-
-  <!-- SECTION PROJETS -->
-  <section id="projets" class="py-5 bg-white">
-    <div class="container">
-      <div class="d-flex justify-content-between align-items-center mb-3">
-        <h2 class="mb-0">Projets</h2>
-        <button class="btn btn-sm btn-outline-secondary" data-section="projets">
-          Masquer / Afficher
-        </button>
-      </div>
-
-      <div class="row g-4">
-        <div class="col-md-6">
-          <div class="card h-100">
-            <div class="card-body">
-              <h5 class="card-title">Projet 1</h5>
-              <p class="text-muted">Technologies : HTML, CSS, JS</p>
-              <p>Description rapide du projet 1.</p>
-              <a href="#" class="btn btn-sm btn-primary">Voir plus</a>
+          <div class="col-md-4">
+            <div class="card h-100 shadow-sm">
+              <div class="card-body">
+                <h5 class="card-title mb-3">Outils & Collaboration</h5>
+                <ul class="list-unstyled mb-0">
+                  <li><i class="bi bi-github me-2"></i>GitHub (débutant)</li>
+                  <li><i class="bi bi-code-slash me-2"></i>VS Code</li>
+                  <li><i class="bi bi-diagram-3 me-2"></i>Travail en équipe sur petits projets</li>
+                </ul>
+              </div>
             </div>
           </div>
-        </div>
 
-        <div class="col-md-6">
-          <div class="card h-100">
-            <div class="card-body">
-              <h5 class="card-title">Projet 2</h5>
-              <p class="text-muted">Technologies : ...</p>
-              <p>Description rapide du projet 2.</p>
-              <a href="#" class="btn btn-sm btn-primary">Voir plus</a>
+          <div class="col-md-4">
+            <div class="card h-100 shadow-sm">
+              <div class="card-body">
+                <h5 class="card-title mb-3">Soft Skills</h5>
+                <ul class="list-unstyled mb-0">
+                  <li><i class="bi bi-check-circle me-2"></i>Motivé et sérieux</li>
+                  <li><i class="bi bi-people me-2"></i>Travail en équipe</li>
+                  <li><i class="bi bi-lightbulb me-2"></i>Capacité d'adaptation et autonomie</li>
+                </ul>
+              </div>
             </div>
           </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- PROJETS -->
+    <section id="projets" class="section-block bg-white">
+      <div class="container">
+        <div class="section-header d-flex justify-content-between align-items-center mb-4">
+          <h2 class="section-title mb-0">Projets</h2>
+          <button class="btn btn-sm btn-outline-secondary" data-section="projets">
+            Masquer / afficher
+          </button>
         </div>
 
-      </div>
-    </div>
-  </section>
+        <div class="row g-4 toggle-target-projets">
+          <div class="col-md-6">
+            <div class="card h-100 shadow-sm">
+              <div class="card-body">
+                <h5 class="card-title">Page d'accueil avec Bootstrap</h5>
+                <p class="text-muted mb-1">HTML, CSS, Bootstrap</p>
+                <p class="mb-3">
+                  Réalisation d'une page web responsive avec navbar, sections, cartes et design moderne
+                  en utilisant le framework Bootstrap 5.
+                </p>
+                <!-- TODO : tu peux mettre un vrai lien GitHub ici -->
+                <a href="#" class="btn btn-sm btn-primary">
+                  Voir le code <i class="bi bi-box-arrow-up-right ms-1"></i>
+                </a>
+              </div>
+            </div>
+          </div>
 
-  <!-- SECTION CENTRES D'INTÉRÊT -->
-  <section id="interets" class="py-5">
-    <div class="container">
-      <div class="d-flex justify-content-between align-items-center mb-3">
-        <h2 class="mb-0">Centres d'intérêt</h2>
-        <button class="btn btn-sm btn-outline-secondary" data-section="interets">
-          Masquer / Afficher
-        </button>
-      </div>
+          <div class="col-md-6">
+            <div class="card h-100 shadow-sm">
+              <div class="card-body">
+                <h5 class="card-title">Mini-projets TPs (exercice)</h5>
+                <p class="text-muted mb-1">HTML, CSS, JavaScript (bases)</p>
+                <p class="mb-3">
+                  Petits exercices de programmation web : formulaires simples, mise en page,
+                  premières interactions avec JavaScript (validation, affichage dynamique...).
+                </p>
+                <!-- Tu pourras adapter ce texte plus tard selon tes vrais TPs -->
+                <span class="badge bg-secondary">En cours d'amélioration</span>
+              </div>
+            </div>
+          </div>
 
-      <ul class="list-group">
-        <li class="list-group-item">Musique</li>
-        <li class="list-group-item">Sport</li>
-        <li class="list-group-item">Lecture</li>
-      </ul>
-    </div>
-  </section>
+        </div>
+      </div>
+    </section>
+
+    <!-- CENTRES D'INTÉRÊT -->
+    <section id="interets" class="section-block">
+      <div class="container">
+        <div class="section-header d-flex justify-content-between align-items-center mb-4">
+          <h2 class="section-title mb-0">Centres d'intérêt</h2>
+          <button class="btn btn-sm btn-outline-secondary" data-section="interets">
+            Masquer / afficher
+          </button>
+        </div>
+
+        <div class="toggle-target-interets">
+          <div class="d-flex flex-wrap gap-2">
+            <span class="badge rounded-pill bg-primary-subtle text-primary-emphasis">Football</span>
+            <span class="badge rounded-pill bg-primary-subtle text-primary-emphasis">Musique</span>
+            <span class="badge rounded-pill bg-primary-subtle text-primary-emphasis">Jeux vidéos</span>
+            <span class="badge rounded-pill bg-primary-subtle text-primary-emphasis">Lecture</span>
+            <span class="badge rounded-pill bg-primary-subtle text-primary-emphasis">Voyage</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
 
   <!-- FOOTER -->
-  <footer class="bg-dark text-white text-center p-3 mt-5">
-    <p class="mb-1">© 2025 Ton Nom - CV Interactif</p>
+  <footer class="bg-dark text-white text-center p-3 mt-4">
+    <p class="mb-1">© 2025 Yassine Loutfi - CV interactif</p>
     <p class="mb-0">
-      <a href="#profil" class="text-white text-decoration-none me-3">Haut de page</a>
-      <a href="#" class="text-white text-decoration-none">GitHub</a>
+      <a href="#profil" class="text-white text-decoration-none me-3">
+        <i class="bi bi-arrow-up-circle"></i> Haut de page
+      </a>
+      <!-- TODO : tu peux mettre ton vrai GitHub ici -->
+      <a href="#" class="text-white text-decoration-none">
+        <i class="bi bi-github"></i> GitHub
+      </a>
     </p>
   </footer>
 
-  <!-- Ton script JS -->
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <!-- Ton script -->
   <script src="script.js"></script>
 </body>
 </html>
-
